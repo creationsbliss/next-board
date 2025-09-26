@@ -10,10 +10,10 @@ const UsersPage = () => (
 
       <Link
         className="rounded-sm bg-chart-2/20 px-2 py-1 text-sm hover:bg-chart-2/30"
-        href="/dashboard/users/add"
+        href="/dashboard/users/add-user"
         type="button"
       >
-        Add New
+        Add User
       </Link>
     </div>
 
