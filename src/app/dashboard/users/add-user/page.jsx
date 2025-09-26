@@ -54,8 +54,8 @@ const AddUserpage = () => (
       </div>
       <textarea
         className="mt-2 w-full rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
-        name="description"
-        placeholder="Description"
+        name="address"
+        placeholder="Address"
         required
         rows="16"
       />
