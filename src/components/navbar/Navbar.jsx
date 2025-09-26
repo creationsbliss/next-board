@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <div className="flex items-center justify-between bg-sidebar-accent p-4">
+    <div className="flex items-center justify-between rounded-sm bg-sidebar-accent p-4">
       <div className="font-medium text-muted-foreground capitalize">
         {pathname.split("/").pop()}
       </div>

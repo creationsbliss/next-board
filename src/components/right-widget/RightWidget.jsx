@@ -14,7 +14,7 @@ const RightWidget = () => (
           </p>
         </div>
         <button
-          className="w-[100px] rounded-sm bg-chart-2/20 p-2 hover:bg-chart-2/30"
+          className="w-[60px] rounded-sm bg-chart-2/20 p-2 text-sm hover:bg-chart-2/30"
           type="button"
         >
           Watch
@@ -36,7 +36,7 @@ const RightWidget = () => (
           </p>
         </div>
         <button
-          className="w-[100px] rounded-sm bg-chart-2/20 p-2 hover:bg-chart-2/30"
+          className="w-[60px] rounded-sm bg-chart-2/20 p-2 text-sm hover:bg-chart-2/30"
           type="button"
         >
           Watch
