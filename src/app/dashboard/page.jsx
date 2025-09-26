@@ -18,7 +18,7 @@ const DashboardPage = () => (
         <Chart />
       </div>
     </div>
-    <div className="flex-1 bg-green-200 p-4">
+    <div className="flex-1">
       <div>
         <RightWidget />
       </div>
