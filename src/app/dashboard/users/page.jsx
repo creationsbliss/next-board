@@ -4,9 +4,9 @@ import Pagination from "@/components/pagination/Pagination";
 import Search from "@/components/search/Search";
 
 const UsersPage = () => (
-  <div className="mt-4 flex flex-col gap-4 rounded-sm bg-sidebar-accent p-4">
+  <div className="mt-4 flex flex-col gap-10 rounded-sm bg-sidebar-accent p-4">
     <div className="flex items-center justify-between">
-      <Search placeholder={"Search for a user"} />
+      <Search placeholder={"Search for a user..."} />
 
       <Link
         className="rounded-sm bg-chart-2/20 px-2 py-1 text-sm hover:bg-chart-2/30"
@@ -22,7 +22,7 @@ const UsersPage = () => (
         <tr>
           <td>Name</td>
           <td>Email</td>
-          <td>Created At</td>
+          <td>CreatedAt</td>
           <td>Role</td>
           <td>Status</td>
           <td>Action</td>
