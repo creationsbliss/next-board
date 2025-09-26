@@ -5,6 +5,7 @@ import {
   Group,
   Headset,
   LayoutDashboard,
+  LogOutIcon,
   Settings as SettingsIcon,
   ShoppingBasket,
   Users,
@@ -88,6 +89,9 @@ const Sidebar = () => (
         </li>
       ))}
     </ul>
+    <button className="mt-2 flex items-center gap-4 p-2" type="button">
+      <LogOutIcon size={18} /> Logout
+    </button>
   </div>
 );
 
