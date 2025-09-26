@@ -9,7 +9,7 @@ const Card = () => (
       <h2>Total Users</h2>
       <p className="font-medium text-xl">11.573</p>
       <p className="text-sm">
-        <span className="text-chart-2"> 15% </span> inccreases last week
+        <span className="text-chart-2"> 15% </span> increases last week
       </p>
     </div>
   </div>
