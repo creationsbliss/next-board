@@ -56,10 +56,10 @@ const UsersPage = () => (
                 href={"/dashboard/users/1"}
                 type="button"
               >
-                View
+                Edit
               </Link>
               <button
-                className="rounded-sm bg-chart-1/20 px-2 py-1 text-sm"
+                className="cursor-pointer rounded-sm bg-chart-1/20 px-2 py-1 text-sm"
                 type="button"
               >
                 Delete
