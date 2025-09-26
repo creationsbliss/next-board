@@ -89,7 +89,10 @@ const Sidebar = () => (
         </li>
       ))}
     </ul>
-    <button className="mt-2 flex items-center gap-4 p-2" type="button">
+    <button
+      className="mt-2 flex w-full cursor-pointer items-center gap-4 rounded-sm p-2 hover:bg-sidebar-border"
+      type="button"
+    >
       <LogOutIcon size={18} /> Logout
     </button>
   </div>

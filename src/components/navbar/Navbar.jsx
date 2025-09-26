@@ -25,9 +25,9 @@ const Navbar = () => {
           />
         </div>
         <div className="flex items-center gap-4">
-          <MessageSquareTextIcon size={20} />
-          <BellIcon size={20} />
-          <EarthIcon size={20} />
+          <MessageSquareTextIcon size={18} />
+          <BellIcon size={18} />
+          <EarthIcon size={18} />
         </div>
       </div>
     </div>
