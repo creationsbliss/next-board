@@ -4,8 +4,8 @@ const AddUserpage = () => (
       <div className="grid grid-cols-2 gap-4">
         <input
           className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
-          name="title"
-          placeholder="Title"
+          name="username"
+          placeholder="Username"
           required
           type="text"
         />
@@ -27,12 +27,11 @@ const AddUserpage = () => (
           className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
           name="phone"
           placeholder="Phone"
-          type="phone"
+          type="text"
         />
         <select
           className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
           name="isAdmin"
-          required
         >
           <option value={false}>Is Admin</option>
           <option value={false}>No</option>
@@ -41,7 +40,7 @@ const AddUserpage = () => (
         <select
           className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
           name="isActive"
-          required
+         
         >
           <option value={true}>Is Active</option>
           <option value={true}>Yes</option>

@@ -12,7 +12,6 @@ const AddProductPage = () => (
         <select
           className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
           name="category"
-          required
         >
           <option value="general">Select Category</option>
           <option value="computer">Computer</option>

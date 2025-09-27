@@ -84,7 +84,7 @@ const SingleProductPage = () => (
           className="mt-2 w-full rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground text-sm outline-none"
           id="description"
           name="description"
-          placeholder="sm"
+          placeholder="Description"
           required
           rows="16"
         />
