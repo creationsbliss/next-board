@@ -1,7 +1,7 @@
 const AddProductPage = () => (
   <div className="mt-4 rounded-sm bg-sidebar-accent p-4">
     <form action="">
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-2 gap-4">
         <input
           className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
           name="title"
@@ -50,7 +50,7 @@ const AddProductPage = () => (
         />
       </div>
       <textarea
-        className="mt-2 w-full rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
+        className="mt-4 w-full rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
         name="description"
         placeholder="Description"
         required

@@ -53,7 +53,7 @@ const ProductsPage = () => (
             <div className="flex gap-2">
               <Link
                 className="rounded-sm bg-chart-4/20 px-2 py-1 text-sm"
-                href="/"
+                href={"/dashboard/products/123"}
                 type="button"
               >
                 Edit

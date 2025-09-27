@@ -10,12 +10,12 @@ const SingleUserPage = () => (
     </div>
 
     <div className="flex-3 bg-sidebar-accent p-4">
-      <form action="" className="flex flex-col gap-2">
+      <form action="" className="flex flex-col gap-4">
         <label className="text-sm" htmlFor="username">
           Usename
         </label>
         <input
-          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
+          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground text-sm outline-none"
           id="username"
           name="title"
           placeholder="Title"
@@ -26,7 +26,7 @@ const SingleUserPage = () => (
           Email
         </label>
         <input
-          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
+          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground text-sm outline-none"
           id="email"
           name="email"
           placeholder="Email"
@@ -37,7 +37,7 @@ const SingleUserPage = () => (
           Password
         </label>
         <input
-          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
+          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground text-sm outline-none"
           id="password"
           name="password"
           placeholder="Password"
@@ -48,7 +48,7 @@ const SingleUserPage = () => (
           Phone
         </label>
         <input
-          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
+          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground text-sm outline-none"
           id="phone"
           name="phone"
           placeholder="Phone"
@@ -58,7 +58,7 @@ const SingleUserPage = () => (
           Address
         </label>
         <textarea
-          className="mt-2 w-full rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
+          className="mt-2 w-full rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground text-sm outline-none"
           id="address"
           name="address"
           placeholder="address"
@@ -69,7 +69,7 @@ const SingleUserPage = () => (
           isAdmin
         </label>
         <select
-          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
+          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground text-sm outline-none"
           id="isAdmin"
           name="isAdmin"
           required
@@ -81,7 +81,7 @@ const SingleUserPage = () => (
           isActive
         </label>
         <select
-          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground outline-none"
+          className="rounded-sm border-2 border-sidebar-border bg-transparent p-2 text-muted-foreground text-sm outline-none"
           id="isActive"
           name="isAdmin"
           required
