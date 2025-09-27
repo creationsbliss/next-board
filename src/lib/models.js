@@ -5,7 +5,7 @@ const userSchema = new Schema({
     username: { type: String, required: true, unique: true, min: 3, max: 20 },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    image: {type: Srting},
+    image: {type: String},
     isAdmin: {type: Boolean, default: false},
     isActive: {type: Boolean, default: true},
     phone: {type: String},
@@ -18,7 +18,7 @@ const productSchema = new Schema({
     description: { type: String, required: true },
     price: { type: Number, required: true, min:0 },
     stock: { type: Number, required: true, min:0 },
-    image: {type: Srting},
+    image: {type: String},
     color: {type: String},
     size: {type: String}
 }, {timestamps: true})

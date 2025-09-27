@@ -2,9 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Pagination from "@/components/pagination/Pagination";
 import Search from "@/components/search/Search";
+import { fetchUsers } from "@/lib/data";
 
-const UsersPage = () => (
-  <div className="mt-4 flex flex-col gap-10 rounded-sm bg-sidebar-accent p-4">
+const UsersPage = async () => {
+  const users = await fetchUsers();
+
+  return(
+    <div className="mt-4 flex flex-col gap-10 rounded-sm bg-sidebar-accent p-4">
     <div className="flex items-center justify-between">
       <Search placeholder={"Search for a user..."} />
 
@@ -29,49 +33,53 @@ const UsersPage = () => (
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className="py-2">
-            <div className="flex items-center gap-2">
-              <Image
-                alt="leerob image"
-                className="rounded-full"
-                height={30}
-                src="https://github.com/leerob.png"
-                width={30}
-              />
-              Lee Rohibson
-            </div>{" "}
-          </td>
-          <td className="py-2">lee@gmail.com</td>
-          <td className="py-2">
-            {new Date().getMonth()}.{new Date().getDate()}.
-            {new Date().getFullYear()}
-          </td>
-          <td>Admin</td>
-          <td>Active</td>
-          <td className="py-2">
-            <div className="flex gap-2">
-              <Link
-                className="rounded-sm bg-chart-4/20 px-2 py-1 text-sm"
-                href={"/dashboard/users/1"}
-                type="button"
-              >
-                Edit
-              </Link>
-              <button
-                className="cursor-pointer rounded-sm bg-chart-1/20 px-2 py-1 text-sm"
-                type="button"
-              >
-                Delete
-              </button>
-            </div>
-          </td>
+        {
+          users.map(user => (
+            <tr key={user._id}>
+              <td className="py-2">
+                <div className="flex items-center gap-2">
+                  <Image
+                    alt="user image"
+                    className="rounded-full"
+                    height={30}
+                    src={user.image || "/default-profile.jpg"}
+                    width={30}
+                  />
+                 {user.username}
+                </div>
+              </td>
+              <td className="py-2">{user.email}</td>
+              <td className="py-2">
+                {user.createdAt?.toString().slice(4, 16)}
+              </td>
+              <td>{user.isAdmin ? "Admin" : "User"}</td>
+              <td>{user.isActive ? "Active" : "Inactive"}</td>
+              <td className="py-2">
+                <div className="flex gap-2">
+                  <Link
+                    className="rounded-sm bg-chart-4/20 px-2 py-1 text-sm"
+                    href={`/dashboard/users/${user._id}`}
+                    type="button"
+                  >
+                    Edit
+                  </Link>
+                  <button
+                    className="cursor-pointer rounded-sm bg-chart-1/20 px-2 py-1 text-sm"
+                    type="button"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </td>
         </tr>
+          ))
+        }
       </tbody>
     </table>
 
     <Pagination />
   </div>
-);
+  )
+}
 
 export default UsersPage;
