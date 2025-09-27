@@ -34,9 +34,7 @@ const AddUserpage = () => (
           name="isAdmin"
           required
         >
-          <option selected value={false}>
-            Is Admin
-          </option>
+          <option value={false}>Is Admin</option>
           <option value={false}>No</option>
           <option value={true}>Yes</option>
         </select>
@@ -45,9 +43,7 @@ const AddUserpage = () => (
           name="isActive"
           required
         >
-          <option selected value={true}>
-            Is Active
-          </option>
+          <option value={true}>Is Active</option>
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select>
