@@ -4,37 +4,38 @@ import Pagination from "@/components/pagination/Pagination";
 import Search from "@/components/search/Search";
 import { fetchUsers } from "@/lib/data";
 
-const UsersPage = async () => {
-  const users = await fetchUsers();
+const UsersPage = async ({ searchParams }) => {
+  const q = searchParams?.q || "";
+  const page = searchParams?.page || 1;
+  const users = await fetchUsers(q, page);
 
-  return(
+  return (
     <div className="mt-4 flex flex-col gap-10 rounded-sm bg-sidebar-accent p-4">
-    <div className="flex items-center justify-between">
-      <Search placeholder={"Search for a user..."} />
+      <div className="flex items-center justify-between">
+        <Search placeholder={"Search for a user..."} />
 
-      <Link
-        className="rounded-sm bg-chart-2/20 px-2 py-1 text-sm hover:bg-chart-2/30"
-        href="/dashboard/users/add-user"
-        type="button"
-      >
-        Add User
-      </Link>
-    </div>
+        <Link
+          className="rounded-sm bg-chart-2/20 px-2 py-1 text-sm hover:bg-chart-2/30"
+          href="/dashboard/users/add-user"
+          type="button"
+        >
+          Add User
+        </Link>
+      </div>
 
-    <table className="w-full">
-      <thead className="font-medium">
-        <tr>
-          <td>Name</td>
-          <td>Email</td>
-          <td>CreatedAt</td>
-          <td>Role</td>
-          <td>Status</td>
-          <td>Action</td>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          users.map(user => (
+      <table className="w-full">
+        <thead className="font-medium">
+          <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>CreatedAt</td>
+            <td>Role</td>
+            <td>Status</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user) => (
             <tr key={user._id}>
               <td className="py-2">
                 <div className="flex items-center gap-2">
@@ -45,7 +46,7 @@ const UsersPage = async () => {
                     src={user.image || "/default-profile.jpg"}
                     width={30}
                   />
-                 {user.username}
+                  {user.username}
                 </div>
               </td>
               <td className="py-2">{user.email}</td>
@@ -71,15 +72,14 @@ const UsersPage = async () => {
                   </button>
                 </div>
               </td>
-        </tr>
-          ))
-        }
-      </tbody>
-    </table>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-    <Pagination />
-  </div>
-  )
-}
+      <Pagination />
+    </div>
+  );
+};
 
 export default UsersPage;
